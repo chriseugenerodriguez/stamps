@@ -8,16 +8,23 @@ import { HttpClientModule } from '@angular/common/http';
 import { ModuleProductComponent } from './product.component';
 
 
+// BOOTSTRAP
+import { BsDropdownModule } from 'ngx-bootstrap';
+
 // IMPORT MODULES, DECLARE COMPONENTS
 @NgModule({
 	imports: [
 		CommonModule,
 		RouterModule,
 		HttpModule,
-		HttpClientModule
-	],
+		HttpClientModule,
+    
+    // BOOTSTRAP
+    BsDropdownModule	
+  ],
 	declarations: [
-		ModuleProductComponent,
+    ModuleProductComponent,
+
 
 	],
 	exports: [

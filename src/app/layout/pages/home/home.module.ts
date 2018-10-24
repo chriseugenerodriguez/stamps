@@ -8,7 +8,7 @@ import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home.component';
 
 // MODULE
-import { ModuleProductModule } from 'src/app/core';
+import { ModuleProductModule } from '../../../core';
 
 
 // IMPORT MODULES, DECLARE COMPONENTS

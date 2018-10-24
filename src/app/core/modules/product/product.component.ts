@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit, Input } from "@angular/core";
 
 // COMPONENT
 @Component({
@@ -8,6 +8,10 @@ import { Component, OnInit } from "@angular/core";
 
 // CLASS
 export class ModuleProductComponent implements OnInit {
+
+  @Input() public name: string;
+  @Input() public price: number;
+  @Input() public image: string;
 
   constructor(){}
   ngOnInit(): void {

@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 // RELATED
 import { HeaderComponent } from './header.component';
 
+// CART
+import { ModuleCartModule } from 'src/app/core';
+
 
 // IMPORT MODULES, DECLARE COMPONENTS
 @NgModule({
@@ -14,7 +17,10 @@ import { HeaderComponent } from './header.component';
 		CommonModule,
 		RouterModule,
 		HttpModule,
-		HttpClientModule
+		HttpClientModule,
+
+		// CART
+		ModuleCartModule
 	],
 	declarations: [
 		HeaderComponent,
