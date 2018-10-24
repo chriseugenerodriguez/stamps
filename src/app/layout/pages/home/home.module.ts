@@ -7,6 +7,9 @@ import { HttpClientModule } from '@angular/common/http';
 // RELATED
 import { HomeComponent } from './home.component';
 
+// MODULE
+import { ModuleProductModule } from 'src/app/core';
+
 
 // IMPORT MODULES, DECLARE COMPONENTS
 @NgModule({
@@ -14,7 +17,10 @@ import { HomeComponent } from './home.component';
 		CommonModule,
 		RouterModule,
 		HttpModule,
-		HttpClientModule
+		HttpClientModule,
+
+		// MODULE
+		ModuleProductModule
 	],
 	declarations: [
 		HomeComponent,

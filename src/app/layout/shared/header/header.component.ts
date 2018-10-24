@@ -2,7 +2,6 @@ import { Component, OnInit } from "@angular/core";
 
 // COMPONENT
 @Component({
-	moduleId: module.id,
 	selector: 'header-app',
 	templateUrl: 'header.component.html',
 })
