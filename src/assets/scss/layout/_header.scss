@@ -1,13 +1,16 @@
 header {
-  background: $background;
+  background: $foreground;
+
   .header {
+    padding: 10px 0;
+
     &-logo {
       width: 85px;
       height: 43px;
       object-fit: contain;
     }
 
-    &-menu {
+    &__items {
       display: flex;
       flex-basis: 20%;
       align-items: flex-start;
