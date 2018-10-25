@@ -23,5 +23,28 @@ header {
         color: #ffffff;
       }
     }
+
+    &__nav {
+      margin-left: 20px;
+
+      &__items {
+        margin-top: 4px;
+        margin-bottom: -6px;
+        padding: 10px 0px;
+        background: #333;
+        display: none;
+
+        @media only screen and (max-width: $tablet) {
+          display:block;
+        }
+
+        &-link {
+          display: block;
+          padding: 10px 0;
+          text-align: center;
+          color: #fff;
+        }
+      }
+    }
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from "@angular/core";
+import { Component } from "@angular/core";
 
 // COMPONENT
 @Component({
@@ -7,9 +7,15 @@ import { Component, OnInit } from "@angular/core";
 })
 
 // CLASS
-export class HeaderComponent implements OnInit {
+export class HeaderComponent {
 
-  constructor(){}
-  ngOnInit(): void {
+  nav: boolean;
+
+  constructor(){
+    this.nav = false;
+  }
+
+  toggleNav(){
+    this.nav = !this.nav;
   }
 }

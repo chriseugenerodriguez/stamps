@@ -5,6 +5,10 @@
   display: inline-block;
   vertical-align: sub;
 
+  @media only screen and (max-width: $tablet) {
+    vertical-align: middle;
+  }
+
   &__amount {
     display: inline-block;
     font-weight: 600;
