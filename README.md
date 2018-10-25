@@ -1,6 +1,4 @@
 ## HTML/CSS
-Convert this [Zeplin/Sketch](https://zpl.io/VqyAg8N) design file into HTML & CSS:
-
 *  It should work on the latest Chrome, Firefox, Edge, and Safari (Mac) browsers.
 
 *  Feel free to write the CSS with or without a pre-processor like Sass* or LESS.

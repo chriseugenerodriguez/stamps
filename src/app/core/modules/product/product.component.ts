@@ -1,4 +1,4 @@
-import { Component, OnInit, Input } from "@angular/core";
+import { Component, Input } from "@angular/core";
 
 // INTERFACE
 import { Dropdown } from "../../interfaces/dropdown.interface";
@@ -11,11 +11,14 @@ import { Dropdown } from "../../interfaces/dropdown.interface";
 })
 
 // CLASS
-export class ModuleProductComponent implements OnInit {
+export class ModuleProductComponent {
 
   @Input() public name: string;
   @Input() public price: number;
   @Input() public image: string;
+
+  // LENGTH
+  @Input() public count: string;
 
   qty: number;
 
@@ -45,12 +48,8 @@ export class ModuleProductComponent implements OnInit {
   ];
 
   constructor() {
-
     // RANDOM QTY
     this._randomQty();
-  }
-
-  ngOnInit(): void {
   }
 
   dragstart(a, b, c) {
@@ -65,13 +64,25 @@ export class ModuleProductComponent implements OnInit {
     dt.setDragImage(img, 10, 10);
   }
 
+  dragend(){
+    for(let i = 0; i < this.count.length; i++) {
+      this.selectedQuantity = null;
+      this.qty = null;
+      this._randomQty();
+    }
+  }
+
   private _randomQty() {
+
+
     // RANDOM QTY
-    let a = this._getRandom(20);
+    let a = this._getRandom(20);    
+
     this.selectedQuantity = { id: a, name: a }
 
     // DEFINED QTY
     this.qty = this.selectedQuantity.id;
+      console.log(this.qty);
   }
 
   onSelect(a) {
@@ -83,8 +94,6 @@ export class ModuleProductComponent implements OnInit {
       }
     }
   }
-
-
 
   private _getRandom(max) {
     return Math.floor(Math.random() * Math.floor(max));

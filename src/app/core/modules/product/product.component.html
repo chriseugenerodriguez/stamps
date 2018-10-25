@@ -1,4 +1,4 @@
-<div (dragstart)="dragstart($event, price, qty);" (dragend)="_randomQty();">
+<div (dragstart)="dragstart($event, price, qty);" (dragend)="dragend();">
   <img class="product__items__item__img-desktop" [src]="image['Desktop']" [alt]="name" />
   <img class="product__items__item__img-tablet" [src]="image['Tablet']" [alt]="name" />
   <img class="product__items__item__img-mobile" [src]="image['Mobile']" [alt]="name" />
