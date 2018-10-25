@@ -1,4 +1,4 @@
-import { Component, Input, QueryList, ViewChildren, ElementRef, Renderer2, OnChanges } from '@angular/core';
+import { Component, Input, QueryList, ViewChildren, ElementRef, Renderer2, OnChanges, AfterViewInit } from '@angular/core';
 
 // INTERFACE
 import { Dropdown } from '../../interfaces/dropdown.interface';
@@ -11,7 +11,7 @@ import { Dropdown } from '../../interfaces/dropdown.interface';
 })
 
 // CLASS
-export class ModuleProductComponent {
+export class ModuleProductComponent implements AfterViewInit {
 
   // CHILDREN
   @ViewChildren('select') public select: QueryList<ElementRef>;
@@ -50,7 +50,6 @@ export class ModuleProductComponent {
     dt.setDragImage(img, 10, 10);
   }
 
-  // tslint:disable-next-line:use-life-cycle-interface
   ngAfterViewInit() {
     this.select.forEach(r => {
       this.length = r.nativeElement.length;
