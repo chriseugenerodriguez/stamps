@@ -1,6 +1,4 @@
-# HTML/CSS
-You should have received an invitation to the Zeplin project at Coolnan500@yahoo.com.
-
+## HTML/CSS
 Convert this [Zeplin/Sketch](https://zpl.io/VqyAg8N) design file into HTML & CSS:
 
 *  It should work on the latest Chrome, Firefox, Edge, and Safari (Mac) browsers.
@@ -17,7 +15,7 @@ Convert this [Zeplin/Sketch](https://zpl.io/VqyAg8N) design file into HTML & CSS
 
 `Please note, Zeplin provides CSS for selected elements. Reference it as needed to extract values for properties such as fonts and colors, but I advise against relying on it too heavily. It’s auto-generated and based on how the designer structured the file, which may not correlate with the best approach for semantic mark-up, code structure, or performance.`
 
-# JavaScript
+## JavaScript
 *  The product images are draggable items with the cart icon in the upper right as the drop target.
 
 *  At the start of the application, populate every white dropdown/select below a product with a random quantity between 1 and 20. The total displayed in the cart will be zero, for both quantity and price.
