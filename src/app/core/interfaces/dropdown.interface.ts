@@ -1,4 +1,4 @@
 export interface Dropdown {
-	key: number,
-	value: string
+	id: number, 
+	name: string
 }

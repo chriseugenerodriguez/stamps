@@ -4,7 +4,7 @@
     top right of the page.</div>
 
   <div class="product__items">
-    <module-product-app draggable="true" (dragstart)="dragstart($event, i.Price, i.QTY);" [qty]="i.QTY" [name]="i.Name" [image]="i.Images" [price]="i.Price"
+    <module-product-app draggable="true" [name]="i.Name" [image]="i.Images" [price]="i.Price"
       class="product__items__item" *ngFor="let i of products"></module-product-app>
   </div>
 </div>

@@ -3,6 +3,7 @@ import { CommonModule } from '@angular/common';
 import { RouterModule } from '@angular/router';
 import { HttpModule } from '@angular/http';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule } from '@angular/forms';
 
 // RELATED
 import { ModuleProductComponent } from './product.component';
@@ -16,6 +17,7 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 	imports: [
 		CommonModule,
 		RouterModule,
+		FormsModule,
 		HttpModule,
 		HttpClientModule,
     

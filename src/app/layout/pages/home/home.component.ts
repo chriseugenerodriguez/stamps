@@ -35,16 +35,5 @@ export class HomeComponent implements OnInit {
   }
   ngOnInit(): void {
 	}
-	
-	public dragstart(a, b, c){
-		let dt = a.dataTransfer;
-		let img = new Image(); 
 
-		dt.dropEffect = "move";
-		dt.setData("price", b);
-		dt.setData("qty", c);
-
-		img.src = a.srcElement.currentSrc; 
-		dt.setDragImage(img, 10, 10);
-	}
 }
