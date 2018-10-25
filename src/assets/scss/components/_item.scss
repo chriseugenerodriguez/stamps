@@ -1,13 +1,9 @@
 .product {
   &__items {
-    display: flex;
       margin-top: 53px;
 
       &__item {
         font-family: 'Raleway', sans-serif;
-        display: inline-block;
-        margin-right: 29px;
-        width: 23%;
         text-align: center;
         cursor: move; /* fallback if grab cursor is unsupported */
 
