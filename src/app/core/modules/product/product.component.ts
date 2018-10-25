@@ -14,7 +14,7 @@ import { Dropdown } from '../../interfaces/dropdown.interface';
 export class ModuleProductComponent implements AfterViewInit {
 
   // CHILDREN
-  @ViewChildren('select') public select: QueryList<ElementRef>;
+  @ViewChildren('item') public items: QueryList<ElementRef>;
 
   @Input() public name: string;
   @Input() public price: number;
@@ -51,8 +51,8 @@ export class ModuleProductComponent implements AfterViewInit {
   }
 
   ngAfterViewInit() {
-    this.select.forEach(r => {
-      this.length = r.nativeElement.length;
+    this.items.forEach(r => {
+      this.length = r.nativeElement.children.length;
     });
   }
 
