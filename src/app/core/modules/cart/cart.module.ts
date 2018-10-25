@@ -13,14 +13,13 @@ import { ModuleCartComponent } from "./cart.component";
 		CommonModule,
 		RouterModule,
 		HttpModule,
-		HttpClientModule,
-    
-  ],
+		HttpClientModule
+	],
 	declarations: [
-    ModuleCartComponent
+		ModuleCartComponent
 	],
 	exports: [
-    ModuleCartComponent
+		ModuleCartComponent
 	]
 })
 export class ModuleCartModule { }

@@ -1,23 +1,25 @@
 header {
   background: $foreground;
+  padding: 6px 0;
 
   .header {
-    padding: 10px 0;
 
     &-logo {
-      width: 85px;
-      height: 43px;
-      object-fit: contain;
+      display: inline-block;
+      margin-right: 10px;
     }
 
     &__items {
-      display: flex;
+      font-family: 'Raleway', sans-serif;
+      display: inline-flex;
       flex-basis: 20%;
       align-items: flex-start;
 
       &-link {
         @include font-size(16px);
+        padding: 10px 20px;
         font-weight: 600;
+        text-transform: uppercase;
         color: #ffffff;
       }
     }

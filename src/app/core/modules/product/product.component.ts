@@ -12,6 +12,7 @@ export class ModuleProductComponent implements OnInit {
   @Input() public name: string;
   @Input() public price: number;
   @Input() public image: string;
+  @Input() public qty: string;
 
   constructor(){}
   ngOnInit(): void {

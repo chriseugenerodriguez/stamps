@@ -6,14 +6,14 @@ home-app {
   .home {
     &-title {
       @include font-size(30px);
-      font-family: Raleway;
+      font-family: 'Raleway', sans-serif;
       font-weight: bold;
       color: $header;
     }
 
     &-desc {
       @include font-size(17px);
-      font-family: Raleway;
+      font-family: 'Raleway', sans-serif;
       font-weight: 600;
       color: $subheader;
     }

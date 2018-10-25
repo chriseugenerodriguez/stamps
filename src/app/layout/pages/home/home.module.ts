@@ -10,7 +10,6 @@ import { HomeComponent } from './home.component';
 // MODULE
 import { ModuleProductModule } from '../../../core';
 
-
 // IMPORT MODULES, DECLARE COMPONENTS
 @NgModule({
 	imports: [
@@ -20,11 +19,10 @@ import { ModuleProductModule } from '../../../core';
 		HttpClientModule,
 
 		// MODULE
-		ModuleProductModule
+		ModuleProductModule,
 	],
 	declarations: [
 		HomeComponent,
-
 	],
 	exports: [
 		HomeComponent,

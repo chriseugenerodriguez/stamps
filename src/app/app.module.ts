@@ -1,6 +1,9 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 
+// DRAG
+import { DragDropModule } from '@angular/cdk/drag-drop';
+
 // ROUTING
 import { AppRoutingModule } from './app-routing.module';
 
@@ -21,6 +24,9 @@ import { HomeModule } from './layout/pages/home/home.module';
   imports: [
     BrowserModule,
     AppRoutingModule,
+    
+		// DRAG
+		DragDropModule,
 
     // SHARED
     HeaderModule,

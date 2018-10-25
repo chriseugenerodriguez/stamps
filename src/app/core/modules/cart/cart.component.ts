@@ -10,8 +10,27 @@ import { Component, OnInit, Input } from "@angular/core";
 export class ModuleCartComponent implements OnInit {
 
   @Input() public data: object;
+  total: number;
+  qty: number;
 
-  constructor(){}
+  constructor(){
+    this.qty = 0;
+    this.total = 0;
+  }
   ngOnInit(): void {
+  }
+
+  drop(i) {
+    i.preventDefault();
+    console.log(i.dataTransfer.getData("price"));
+    // GET DATA
+    this.total += Number(i.dataTransfer.getData("price"));
+    this.qty += Number(i.dataTransfer.getData("qty"));
+  }
+
+  dragover(i) {
+    i.preventDefault();
+    // Set the dropEffect to move
+    i.dataTransfer.dropEffect = "move"
   }
 }

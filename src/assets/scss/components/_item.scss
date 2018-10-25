@@ -1,13 +1,15 @@
 .product {
   &__items {
+    display: flex;
       margin-top: 53px;
 
       &__item {
-        font-family: Raleway;
+        font-family: 'Raleway', sans-serif;
         display: inline-block;
         margin-right: 29px;
         width: 23%;
         text-align: center;
+        cursor: move; /* fallback if grab cursor is unsupported */
 
         img {
           @include border-radius(100%);
@@ -65,6 +67,12 @@
         &:last-child {
           margin-right: 0px;
         }
+      }
+      .cdk-drag-placeholder {
+        opacity: 0;
+      }
+      .cdk-drag-animating {
+        transition: transform 450ms cubic-bezier(0, 0, 0.2, 1);
       }
     }      
 }
