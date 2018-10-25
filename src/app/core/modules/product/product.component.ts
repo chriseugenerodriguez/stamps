@@ -1,4 +1,4 @@
-import { Component, Input, QueryList, ViewChildren, ElementRef, Renderer2, OnChanges, AfterViewInit } from '@angular/core';
+import { Component, Input, QueryList, ViewChildren, ElementRef, AfterViewInit } from '@angular/core';
 
 // INTERFACE
 import { Dropdown } from '../../interfaces/dropdown.interface';
@@ -34,7 +34,7 @@ export class ModuleProductComponent implements AfterViewInit {
       };
     });
 
-  constructor(private renderer: Renderer2) {
+  constructor() {
     this._randomQty();
   }
 
@@ -79,7 +79,7 @@ export class ModuleProductComponent implements AfterViewInit {
   onSelect(a) {
     this.selectedQuantity = null;
     for (let i = 0; i < this.quantity.length; i++) {
-      if (this.quantity[i].id === a) {
+      if (this.quantity[i].id === Number(a)) {
         this.selectedQuantity = this.quantity[i];
         this.qty = this.quantity[i].id;
       }
