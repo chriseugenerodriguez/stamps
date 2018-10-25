@@ -60,6 +60,12 @@
             font-weight: bold;
             color: $header;
           }
+
+          &-qty {
+            width: 75px;
+            padding: 2px 5px;
+            margin-top: 10px;
+          }
         }
 
 
