@@ -1,10 +1,10 @@
-<div class="product__item">
-  <img class="product__item-img" [src]="image" [alt]="name" />
-  <div class="product__item__meta">
-    <h4 class="product__item__meta-title">{{name}}</h4>
-    <div class="product__item__meta-price">
-      ${{price}}
-    </div>
-    <div class="product__item__meta-qty"></div>
-  </div>  
+<img class="product__items__item__img-desktop" [src]="image['Desktop']" [alt]="name" />
+<img class="product__items__item__img-tablet" [src]="image['Tablet']" [alt]="name" />
+<img class="product__items__item__img-mobile" [src]="image['Mobile']" [alt]="name" />
+<div class="product__items__item__meta">
+  <div class="product__items__item__meta-title">{{name}}</div>
+  <div class="product__items__item__meta-price">
+    ${{price}}
+  </div>
+  <div class="product__items__item__meta-qty"></div>
 </div>

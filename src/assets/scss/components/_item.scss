@@ -1,0 +1,70 @@
+.product {
+  &__items {
+      margin-top: 53px;
+
+      &__item {
+        font-family: Raleway;
+        display: inline-block;
+        margin-right: 29px;
+        width: 23%;
+        text-align: center;
+
+        img {
+          @include border-radius(100%);
+          width: 100%;
+          margin-bottom: 36px;
+        }
+
+        &__img {
+          @media only screen and (max-width: $desktop) {
+            &-desktop {
+              display: block;
+            }
+            &-tablet,
+            &-mobile {
+              display: none;
+            }
+          }
+          @media only screen and (max-width: $tablet) {
+            &-tablet {
+              display: block;
+            }
+            &-desktop, 
+            &-mobile {
+              display: none;
+            }
+          }
+          @media only screen and (max-width: $mobile) {
+            &-mobile {
+              display: block;
+            }
+            &-tablet,
+            &-desktop {
+              display: none;
+            }
+          }
+        }
+
+        &__meta {
+          @include font-size(17px);
+
+          &-title {
+            font-weight: 600;
+            text-align: center;
+            color: $subheader;
+          }  
+          
+          &-price {
+            font-weight: bold;
+            color: $header;
+          }
+        }
+
+
+
+        &:last-child {
+          margin-right: 0px;
+        }
+      }
+    }      
+}
