@@ -7,6 +7,14 @@
         text-align: center;
         cursor: move; /* fallback if grab cursor is unsupported */
 
+        @media only screen and (max-width: $mobile) {
+          padding: 0 30px;
+        }
+
+        @media only screen and (max-width: $tablet) {
+          margin-bottom: 40px;
+        }
+
         img {
           @include border-radius(100%);
           width: 100%;
