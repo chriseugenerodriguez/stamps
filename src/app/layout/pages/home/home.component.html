@@ -5,7 +5,7 @@
 
   <div class="product__items">
     <div class="row">
-      <module-product-app [count]="products" draggable="true" [name]="i.Name" [image]="i.Images" [price]="i.Price"
+      <module-product-app draggable="true" [name]="i.Name" [image]="i.Images" [price]="i.Price"
       class="product__items__item col-lg-3 col-md-6 col-sm-12" *ngFor="let i of products"></module-product-app>
     </div>
   </div>

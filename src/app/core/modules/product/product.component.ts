@@ -1,7 +1,7 @@
-import { Component, Input } from "@angular/core";
+import { Component, Input, QueryList, ViewChildren, ElementRef, Renderer2, OnChanges } from '@angular/core';
 
 // INTERFACE
-import { Dropdown } from "../../interfaces/dropdown.interface";
+import { Dropdown } from '../../interfaces/dropdown.interface';
 
 
 // COMPONENT
@@ -13,82 +13,74 @@ import { Dropdown } from "../../interfaces/dropdown.interface";
 // CLASS
 export class ModuleProductComponent {
 
+  // CHILDREN
+  @ViewChildren('select') public select: QueryList<ElementRef>;
+
   @Input() public name: string;
   @Input() public price: number;
   @Input() public image: string;
 
-  // LENGTH
-  @Input() public count: string;
-
+  length: number;
   qty: number;
 
   // DROPDOWN
   selectedQuantity: Dropdown;
-  quantity: Array<Dropdown> = [
-    { id: 1, name: 1 },
-    { id: 2, name: 2 },
-    { id: 3, name: 3 },
-    { id: 4, name: 4 },
-    { id: 5, name: 5 },
-    { id: 6, name: 6 },
-    { id: 7, name: 7 },
-    { id: 8, name: 8 },
-    { id: 9, name: 9 },
-    { id: 10, name: 10 },
-    { id: 11, name: 11 },
-    { id: 12, name: 12 },
-    { id: 13, name: 13 },
-    { id: 14, name: 14 },
-    { id: 15, name: 15 },
-    { id: 16, name: 16 },
-    { id: 17, name: 17 },
-    { id: 18, name: 18 },
-    { id: 19, name: 19 },
-    { id: 20, name: 20 },
-  ];
+  quantity = Array(20)
+    .fill(1)
+    .map((x, i) => {
+      return {
+        id: i,
+        name: i
+      };
+    });
 
-  constructor() {
-    // RANDOM QTY
+  constructor(private renderer: Renderer2) {
     this._randomQty();
   }
 
   dragstart(a, b, c) {
-    let dt = a.dataTransfer;
-    let img = new Image();
+    const dt = a.dataTransfer;
+    const img = new Image();
 
-    dt.dropEffect = "move";
-    dt.setData("price", b);
-    dt.setData("qty", c);
+    dt.dropEffect = 'move';
+    dt.setData('price', b);
+    dt.setData('qty', c);
 
     img.src = a.srcElement.currentSrc;
     dt.setDragImage(img, 10, 10);
   }
 
-  dragend(){
-    for(let i = 0; i < this.count.length; i++) {
-      this.selectedQuantity = null;
-      this.qty = null;
+  // tslint:disable-next-line:use-life-cycle-interface
+  ngAfterViewInit() {
+    this.select.forEach(r => {
+      this.length = r.nativeElement.length;
+    });
+  }
+
+  dragend() {
+    for (let r = 0; r < this.length; r++) {
       this._randomQty();
     }
   }
 
   private _randomQty() {
-
+    this.selectedQuantity = null;
+    this.qty = null;
 
     // RANDOM QTY
-    let a = this._getRandom(20);    
+    const a = this._getRandom(20);
 
-    this.selectedQuantity = { id: a, name: a }
+    this.selectedQuantity = { id: a, name: a };
 
     // DEFINED QTY
     this.qty = this.selectedQuantity.id;
-      console.log(this.qty);
+
   }
 
   onSelect(a) {
     this.selectedQuantity = null;
-    for (var i = 0; i < this.quantity.length; i++) {
-      if (this.quantity[i].id == a) {
+    for (let i = 0; i < this.quantity.length; i++) {
+      if (this.quantity[i].id === a) {
         this.selectedQuantity = this.quantity[i];
         this.qty = this.quantity[i].id;
       }

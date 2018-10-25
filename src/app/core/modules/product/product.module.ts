@@ -8,10 +8,6 @@ import { FormsModule } from '@angular/forms';
 // RELATED
 import { ModuleProductComponent } from './product.component';
 
-
-// BOOTSTRAP
-import { BsDropdownModule } from 'ngx-bootstrap';
-
 // IMPORT MODULES, DECLARE COMPONENTS
 @NgModule({
 	imports: [
@@ -20,12 +16,10 @@ import { BsDropdownModule } from 'ngx-bootstrap';
 		FormsModule,
 		HttpModule,
 		HttpClientModule,
-    
-    // BOOTSTRAP
-    BsDropdownModule	
-  ],
+
+	],
 	declarations: [
-    ModuleProductComponent,
+		ModuleProductComponent,
 
 
 	],
