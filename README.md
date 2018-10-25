@@ -1,9 +1,7 @@
 # HTML/CSS
 You should have received an invitation to the Zeplin project at Coolnan500@yahoo.com.
 
-Convert this Zeplin/Sketch design file into HTML & CSS:
-
-`https://zpl.io/VqyAg8N`
+Convert this [Zeplin/Sketch](https://zpl.io/VqyAg8N) design file into HTML & CSS:
 
 *  It should work on the latest Chrome, Firefox, Edge, and Safari (Mac) browsers.
 
@@ -17,7 +15,7 @@ Convert this Zeplin/Sketch design file into HTML & CSS:
 
 *  Add hover/active states to the navigation and products as you see fit.
 
-Please note, Zeplin provides CSS for selected elements. Reference it as needed to extract values for properties such as fonts and colors, but I advise against relying on it too heavily. It’s auto-generated and based on how the designer structured the file, which may not correlate with the best approach for semantic mark-up, code structure, or performance.
+`Please note, Zeplin provides CSS for selected elements. Reference it as needed to extract values for properties such as fonts and colors, but I advise against relying on it too heavily. It’s auto-generated and based on how the designer structured the file, which may not correlate with the best approach for semantic mark-up, code structure, or performance.`
 
 # JavaScript
 *  The product images are draggable items with the cart icon in the upper right as the drop target.
@@ -32,4 +30,4 @@ Please note, Zeplin provides CSS for selected elements. Reference it as needed t
 
 *  Feel free to use a JavaScript library (jQuery*, etc.) or framework (Angular*, React, Vue, etc.) and any plugins.
 
-When you are complete please zip the files and return them to me. Our exchange server will strip the attachment if returned via e-mail, so please provide these via a service such as Dropbox, Google Drive, or Github.
+`When you are complete please zip the files and return them to me. Our exchange server will strip the attachment if returned via e-mail, so please provide these via a service such as Dropbox, Google Drive, or Github.`
