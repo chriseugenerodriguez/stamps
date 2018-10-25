@@ -22,9 +22,9 @@ export class ModuleCartComponent implements OnInit {
 
   drop(i) {
     i.preventDefault();
-    console.log(i.dataTransfer.getData("price"));
+
     // GET DATA
-    this.total += Number(i.dataTransfer.getData("price"));
+    this.total += Number(i.dataTransfer.getData("price") * i.dataTransfer.getData("qty"));
     this.qty += Number(i.dataTransfer.getData("qty"));
   }
 
